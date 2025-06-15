@@ -1,63 +1,120 @@
 * {
+  font-family: "Trebuchet MS", sans-serif;
   box-sizing: border-box;
 }
 
-body {
-  margin: 0;
+.container-grid {
+  /* включаем св-во grid */
+  display: grid;
+  gap: 5px;
+  /* задаем правило для колонок */
+  /* * grid-template-columns: 100px 200px 30px 300px; */
+  /* grid-template-columns: repeat(4, 200px); */
+  /* grid-template-columns: 50% 10% 15% 40%; */
+  /* grid-template-columns: repeat(3, 1fr); */
+  /* grid-template-columns: 6fr 2fr 1fr 3fr 5fr 1fr; */
+  grid-template-columns: repeat(4, 1fr);
 }
 
-header {
-  height: 80px;
-  background-image: url("example.png");
-  background-size: cover;
-  background-position: center;
-  padding: 20px 0 15px;
+.container-item {
+  background-color: lightgreen;
+  padding: 10px;
+}
 
+.container-grid-minmax {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  /* высота строк в grid */
+  grid-auto-rows: 80px;
+  gap: 5px;
+}
+
+.grid-item-adapt {
+  border-radius: 8px;
+  background-color: lightpink;
+}
+
+.grid-item-pic {
+  background-image: url("https://www.innovationnewsnetwork.com/wp-content/uploads/2021/02/Primordial-galaxy-1024x576.jpg");
+  background-size: cover;
+  color: white;
+}
+
+.flex-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #251341;
+  color: white;
+  font-size: 14px;
+}
+
+/* пример множественного селектора по классам */
+.grid-item-adapt,
+.container-item,
+.header,
+.footer,
+.content,
+.nav,
+.planet {
   display: flex;
   justify-content: center;
-}
-
-nav {
-  display: flex;
-  align-items: end;
-  gap: 40px;
-}
-
-nav span {
-  color: white;
-  opacity: 0.5;
-  transition: opacity 0.2s ease-in-out;
-}
-
-nav > div > img {
-  opacity: 0.5;
-  transition: opacity 0.2s ease-in-out;
-}
-
-.logo {
-  height: 32px;
-}
-
-nav > div {
-  display: flex;
   align-items: center;
-  gap: 5px;
-  cursor: pointer;
 }
 
-input {
-  cursor: pointer;
-  opacity: 0.5;
-  transition: opacity 0.2s ease-in-out;
+.container-grid-area {
+  /* height: 600px; */
+  grid-auto-rows: 150px;
+  width: 100%;
+  display: grid;
+  /* если нужно можно выставить толщину каждой колонки */
+  grid-template-columns: 1fr 2fr 2fr 1fr;
+  /* создаем схему grid зон */
+  grid-template-areas:
+    "header header header nav"
+    "content content sun nav"
+    "content content 🪐 nav"
+    "footer footer footer footer";
 }
 
-input:hover {
-  opacity: 1;
+.planet {
+  background-image: url("https://images.theconversation.com/files/615187/original/file-20240822-16-mmtmxi.jpg?ixlib=rb-4.1.0&rect=0%2C178%2C4964%2C2482&q=45&auto=format&w=1356&h=668&fit=crop");
+  grid-area: 🪐;
+  font-size: 40px;
+  padding: 0;
 }
 
-div:hover .oscar,
-div:hover .oscar-desc,
-div:hover .play,
-div:hover .play-desc {
-  opacity: 1;
+.header {
+  background-color: #acade8;
+  /* назначаем зону для элемента */
+  grid-area: header;
+}
+
+.footer {
+  background-color: #0a014f;
+  color: white;
+  grid-area: footer;
+}
+
+.content {
+  background-color: #d65780;
+  color: white;
+  grid-area: content;
+}
+
+.nav {
+  background-color: #f3e86f;
+  grid-area: nav;
+}
+
+.sun {
+  background-image: url("https://www.worldatlas.com/r/w1200/upload/50/d4/a6/shutterstock-84203080.jpg");
+  grid-area: sun;
+}
+
+.sun,
+.planet {
+  background-size: cover;
+  background-position: center;
 }

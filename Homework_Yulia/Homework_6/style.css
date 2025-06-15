@@ -1,0 +1,138 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: lightyellow;
+  padding-top: 100px; /* чтобы контент не перекрывался шапкой */
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: lightgreen;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+.container-character-card {
+  display: grid;
+  grid-template-columns: repeat(4, 370px);
+  grid-auto-rows: 370px;
+  gap: 60px;
+}
+
+.grid-item_1 {
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyEPiEHS_BWAl32popHNGC41WDjBhkRM1rzQ&s");
+  background-size: cover;
+  color: grey;
+  border-radius: 10px;
+}
+
+.grid-item_2 {
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqZImg_Rfyr-XhfeLAP-4AEUEfm_Kybd-KeA&s");
+  background-size: cover;
+  color: grey;
+  border-radius: 10px;
+}
+
+.grid-item_3 {
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKpQRdatjm5miyRAO1hahLybDUSyY019jmmA&s");
+  background-size: cover;
+  color: white;
+  border-radius: 10px;
+}
+
+.grid-item_4 {
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRws6cu5lN08dciQSGXJf63tox0kvZQzRRPDA&s");
+  background-size: cover;
+  color: white;
+  border-radius: 10px;
+}
+
+.grid-item_5 {
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHfHJLFXoVCrSnYDusRot9bfr9kZjXU6PmRg&s");
+  background-size: cover;
+  color: grey;
+  border-radius: 10px;
+}
+
+.grid-item_6 {
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyGHLSjOJclqYYaKCT57Ir9FJCnJ5hl3Ljsg&s");
+  background-size: cover;
+  color: white;
+  border-radius: 10px;
+}
+
+.grid-item_7 {
+  background-image: url("https://welovebrands.com.ua/wp-content/uploads/2023/06/disney-photo-30.png");
+  background-size: cover;
+  color: white;
+  border-radius: 10px;
+}
+
+.grid-item_8 {
+  background-image: url("https://upload.wikimedia.org/wikipedia/ru/thumb/7/7c/Goofy2013.jpg/320px-Goofy2013.jpg");
+  background-size: cover;
+  color: grey;
+  border-radius: 10px;
+}
+
+.grid-item_9 {
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiXIzp25A3zUaUDfQkSOdCEsUC0QWbpRRqJuiz5jZlDmZM3gJJLh_FS1I-mwpymDQ1aWA&usqp=CAU");
+  background-size: cover;
+  color: white;
+  border-radius: 10px;
+}
+
+.grid-item_10 {
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIqBVIUKDgXX78Klsz_C0roy5Q90wtlgdO283mSkDn659AnDa_oH7s9CU7m0XXSXUIRG4&usqp=CAU");
+  background-size: cover;
+  color: white;
+  border-radius: 10px;
+}
+
+.grid-item_11 {
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRI5_TvzrToTXyu2LCFc2eqYg5-A7R_3yuR8g&s");
+  background-size: cover;
+  color: grey;
+  border-radius: 10px;
+}
+
+.grid-item_12 {
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzbXObq_Ntp4LhKNK_uBA5m7utJLi45XSPWg&s");
+  background-size: cover;
+  color: white;
+  border-radius: 10px;
+}
+
+.character-card:hover {
+  transform: scale(1.3);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.character-card {
+  display: flex;
+  align-items: flex-start; /* прижать вверх */
+  justify-content: flex-start; /* прижать влево */
+  padding: 10px;
+  font-weight: bold;
+  font-size: 16px;
+  background-size: cover;
+  background-position: center;
+}
