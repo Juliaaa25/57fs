@@ -1,0 +1,40 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background-color: #f8f8f8;
+}
+
+input {
+  margin: 5px;
+  padding: 5px 8px;
+  font-size: 18px;
+}
+
+button {
+  margin: 5px;
+  padding: 6px 12px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#add-btn {
+  background-color: #4caf50;
+  color: white;
+}
+
+#clear-btn {
+  background-color: #f44336;
+  color: white;
+}
+
+ul {
+  margin-top: 30px;
+  padding-left: 30px;
+}
+
+li {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
