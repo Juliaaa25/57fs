@@ -1,4 +1,4 @@
-const Promise1 = new Promise((resolve, reject) => {
+const myPromise = new Promise((resolve, reject) => {
   const success = Math.random() < 0.5;
 
   if (success) {
@@ -8,8 +8,10 @@ const Promise1 = new Promise((resolve, reject) => {
   }
 });
 
-Promise1.then((message) => {
-  console.log("Успех:", message);
-}).catch((error) => {
-  console.error("Ошибка:", error);
-});
+myPromise
+  .then((message) => {
+    console.log("Успех:", message);
+  })
+  .catch((error) => {
+    console.error("Ошибка:", error);
+  });
