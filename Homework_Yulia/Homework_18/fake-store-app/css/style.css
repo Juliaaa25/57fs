@@ -6,13 +6,20 @@ body {
   align-items: center;
 }
 
-/* Центрирование заголовков, форм и списков */
 main,
 h1,
 h2,
 form,
 ul {
   text-align: center;
+}
+
+h1 {
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 8px;
+  margin-bottom: 10px;
 }
 
 .nav-bar {
@@ -60,7 +67,6 @@ ul {
   width: 80%;
 }
 
-/* Центрирование footer */
 footer {
   text-align: center;
   margin-top: 40px;
